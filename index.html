@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Resume Generator</h2>
+        <form method="post">
+            <label>Name:</label>
+            <input type="text" name="name" required><br>
+
+            <label>Email:</label>
+            <input type="email" name="email" required><br>
+
+            <label>Phone:</label>
+            <input type="text" name="phone" required><br>
+
+            <label>Summary:</label>
+            <textarea name="summary" rows="3"></textarea><br>
+
+            <label>Skills (comma separated):</label>
+            <input type="text" name="skills"><br>
+
+            <label>Work Experience:</label>
+            <textarea name="experience" rows="3"></textarea><br>
+
+            <label>Project Title:</label>
+            <input type="text" name="project_title"><br>
+
+            <label>Project Description:</label>
+            <textarea name="project_description" rows="3"></textarea><br>
+
+            <label>Tech Stack Used:</label>
+            <input type="text" name="tech_stack"><br>
+
+            <label>Is this an IT-related project?</label>
+            <select name="project_type">
+                <option value="IT">Yes, IT-related</option>
+                <option value="Non-IT">No, Non-IT related</option>
+            </select><br>
+
+            <label>Certifications:</label>
+            <textarea name="certifications" rows="3"></textarea><br>
+
+            <label>Are these certifications related to IT?</label>
+            <select name="cert_type">
+                <option value="IT">Yes, IT-related</option>
+                <option value="Non-IT">No, Non-IT related</option>
+            </select><br>
+
+            <label>Education:</label>
+            <textarea name="education" rows="3"></textarea><br>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+</body>
+</html>
